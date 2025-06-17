@@ -1,0 +1,107 @@
+#frame{
+    width: 660px;
+    margin: 60px auto;
+    display:flex;
+    flex-direction:column;
+    padding: 0 40px 30px;
+    background-color: #d52b1e;
+    border-radius:20px;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+
+
+}
+header h1{
+    /*font-family: 'Press Start 2P', 'Courier New', Courier, monospace;*/
+    /*color: #fff;*/
+    /*background-color: #c42126;*/
+    margin:0;
+    width: 575px;
+    font-family: 'Pacifico', cursive;
+    color: #FFD700;
+    padding: 16px;
+    font-size: 36px;
+
+    text-align: center;
+}
+
+.container{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    outline: 2px solid black;
+    border:none;
+    margin: 0 auto;
+    flex:1;
+
+}
+.grid-cells{
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    margin:0;
+    padding:0;
+    background-color: white;
+}
+#buttons {
+    display: flex;
+    width: 600px;
+    height: 10px;
+    margin: 10px auto;
+    justify-content: flex-start;
+
+}
+#slider{
+    accent-color: beige;
+    padding: 10px 10px;
+}
+#color{
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    accent-color: beige;
+}
+
+
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+    #frame {
+        width: 95vw;
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        height: auto; /* Remove fixed height */
+        aspect-ratio: 1 / 1; /* Keep it square */
+    }
+
+    .grid-cells {
+        width: calc(100% / 16); /* JS still sets size, but this ensures they shrink on small screens */
+        aspect-ratio: 1 / 1;
+    }
+
+    #buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    #slider, #color {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
